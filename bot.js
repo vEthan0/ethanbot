@@ -1,244 +1,265 @@
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-  response.sendStatus(200);
+const Discord = require("discord.js");
+const myid = ['ID'];
+const prefix = ['$'];
+const client = new Discord.Client();
+const client2 = new Discord.Client();
+const client3 = new Discord.Client();
+const client4 = new Discord.Client();
+const client5 = new Discord.Client();
+const client6 = new Discord.Client();
+
+
+//???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+
+client.login(process.env.TOKEN);
+client2.login(process.env.TOKEN2);
+client3.login(process.env.TOKEN3);
+client4.login(process.env.TOKEN4);
+client5.login(process.env.TOKEN5);
+client6.login(process.env.TOKEN6);
+
+
+//???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+
+client.on('message', message => {
+  if (message.content === 'd1') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c1'){
+message.channel.send('#credits')
+  }
+  if(message.content === 'r1'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p1') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s1")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
 });
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://.glitch.me/`);
-}, 280000);
  
-// كل البكجات الي ممكن تحتجها في اي بوت
-const { Client, RichEmbed } = require("discord.js");
-var { Util } = require('discord.js');
-const client = new Client({ disableEveryone: true})
-const ytdl = require("ytdl-core");
-const canvas = require("canvas");
-const Canvas = require("canvas");
-const convert = require("hh-mm-ss")
-const fetchVideoInfo = require("youtube-info");
-const botversion = require('./package.json').version;
-const simpleytapi = require('simple-youtube-api')
-const moment = require("moment");
-const fs = require('fs');
-const util = require("util")
-const gif = require("gif-search");
-const opus = require("node-opus");
-const ms = require("ms");
-const jimp = require("jimp");
-const { get } = require('snekfetch');
-const guild = require('guild');
-const dateFormat = require('dateformat');//npm i dateformat
-const YouTube = require('simple-youtube-api');
-const hastebins = require('hastebin-gen');
-const pretty = require("pretty-ms");
-client.login(process.env.BOT_TOKEN);
-const queue = new Map();
-var table = require('table').table
-const Discord = require('discord.js');
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client2.on('message', message => {
+  if (message.content === 'd2') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c2'){
+message.channel.send('#credits')
+  }
+   if(message.content === 'r2'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p2') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s2")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
 });
-
-
-//code
-
-
-const myid = [''];// ايدي حسابك
-const prefix = ['']
-
-client.on('ready', () => {
-   console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : 3bker `);
-   console.log(`----------------`);
-   console.log(`Loadinng`);
-   console.log(`Loadinng.`);
-   console.log(`Loadinng..`);
-   console.log(`Loadinng...`);
-   console.log(`This Bots Online ' `);
-   console.log(`----------------`);
+ 
+client3.on('message', message => {
+  if (message.content === 'd3') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c3'){
+message.channel.send('#credits')
+  }
+  if(message.content === 'r3'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p3') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s3")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
 });
-
-
-client.on("message", message => {
-  if (message.author.bot) return;
-
-  if (message.content === prefix + "help") {
-    message.channel.send(`**Credits Bot Help
--
-Prefix + d | لاخذ دايلي الحساب
--
-Prefix + C | لمعرفة كم الكريديت الموجوده ب الحساب
--
-Prefix + r | لاخذ ريب الحساب
--**
-
-**__طريقة سحب الكريديت من الحساب__**
-
-*الخطوة الاولي*
-
-__Prefix + s + #credits + Mention + Amount__
-
-*الخطوه الثانية*
-
-__prefix + s + رقم تأكيد التحويل__`);
+ 
+client4.on('message', message => {
+  if (message.content === 'd4') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c4'){
+message.channel.send('#credits')
+  }
+  if(message.content === 'r4'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p4') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s4")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
+});
+ 
+client5.on('message', message => {
+  if (message.content === 'd5') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c5'){
+message.channel.send('#credits')
+  }
+  if(message.content === 'r5'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p5') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s5")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
   }
 });
 
+client6.on('message', message => {
+  if (message.content === 'd6') {
+message.channel.send('#daily')
+  }
+  if(message.content === 'c6'){
+message.channel.send('#credits')
+  }
+  if(message.content === 'r6'){
+message.channel.send("#rep "+"<@" + myid + ">")
+  }
+  if (message.content === 'p6') {
+message.channel.send('#profile')
+  }
+  if(message.content.startsWith("s6")) {
+    var text = message.content.split(' ').slice(1).join(' ');
+     message.channel.send(text);
+  }
+});
+
+
+//???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+
+
 client.on('message', message => {
-    if(message.content === prefix+'d'){
-        message.channel.send('#daily')
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``1`` ")
     }
 });
 
-client.on('message', message => {
-    if(message.content === prefix+'c'){
-        message.channel.send('#credits')
+client2.on('message', message => {
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``2`` ")
+    }
+});
+
+client3.on('message', message => {
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``3`` ")
+    }
+});
+
+client4.on('message', message => {
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``4`` ")
+    }
+});
+
+client5.on('message', message => {
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``5`` ")
+    }
+});
+
+client6.on('message', message => {
+    if(message.content === prefix+'number'){
+        message.channel.send(" My Token Is ``6`` ")
     }
 });
 
 
-client.on('message', message => {
-    if(message.content === prefix+'p'){
-        message.channel.send('#profile')
-    }
-});
+//???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
 
 client.on('message', message => {
-    if(message.content === prefix+'u'){
-        message.channel.send('#user')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === prefix+'i'){
-        message.channel.send('#id')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === prefix+'r'){
-        message.channel.send("#rep "+"<@" + myid + ">")
-    }
-});
-
-
-
-
-
-
-
-client.on('message',function(message) {
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "s")) {
-if(!args) return;
-message.channel.send(`${args}`);
-}
-});
-
-
-
-var interval;
-var infoid = [];
-var Abdo = [];
-var AbdoSPAM = [];
-var curr = 0;
-var count = 0;
-var acurr = 0;
-
-
-
-client.on('message', message => {
-    
-     
-    if (message.content === prefix + 'spam') { 
-        if (AbdoSPAM.indexOf(message.channel.id) < 0) {
-            AbdoSPAM.push(message.channel.id);
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
         }
-        message.channel.send('**__تم تفعيل الاسبام__**');
-        let letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789".split("");
-        let spaces = " ".repeat(10);
-        let last = "";
-        let messages = 0;
- 
-        setInterval(() => {
-            let str = "";
-            let num = Math.floor(Math.random() * 10);
-            for(let i = 0; i < num; i++) {
-                str += letters[Math.floor(Math.random() * letters.length)];
- 
-                if(i === num - 1) {
-                    if(last === "") {
-                        messages += 1;
-                        last = `${str} ${spaces.slice(str.length + 1)}`;
-                        return message.channel.send(`${str} ${spaces.slice(str.length + 1)}${messages}`);
-                    } else {
-                        messages += 1;
-                        let spaced = `${str} ${spaces.slice(str.length + 1)}${messages}`;
-                        last = spaced;
-                        return message.channel.send(spaced);
-                    }
-                }
-            }
-        }, 120000);
-
-        clearInterval(interval);
-        if (AbdoSPAM.length > 0) {
-            interval = setInterval(function() {
-                if (AbdoSPAM[curr] === undefined)
-                    curr = 0;
-                count++;
-                if (count > 90 && Abdo.length > 0) {
-                    if (Abdo[acurr] === undefined) {
-                        acurr = 0;
-                        count = 0;   
-                    }
-                    client.channels.get(Abdo[acurr]).send('ping');
-                    acurr++;
-                }
-                else {
-                    client.channels.get(AbdoSPAM[curr]).send(`${str} ${spaces.slice(str.length + 1)}${messages}`);
-                    curr++;
-                }
-            }, 21600000);
-        }
-    }
-    
-    if (message.content === prefix + 'stop') {
-        var index = AbdoSPAM.indexOf(message.channel.id);
-        if (index > -1) {
-          AbdoSPAM.splice(index, 1);
-        }
-        message.channel.send('**___تــم ايقاف الاسبام__**');
-      
-        clearInterval(interval);
-        if (AbdoSPAM.length > 0) {
-            interval = setInterval(function() {
-                if (AbdoSPAM[curr] === undefined)
-                    curr = 0;
-                count++;
-                if (count > 90 && Abdo.length > 0) {
-                    if (Abdo[acurr] === undefined) {
-                        acurr = 0;
-                        count = 0;   
-                    }
-                    client.channels.get(Abdo[acurr]).send('ping');
-                    acurr++;
-                }
-                else {
-                    client.channels.get(AbdoSPAM[curr]).send(spaced);
-                    curr++;
-                }
-            }, 28800000);
-        }
-    }
-    
-    if (message.content === prefix + 'sc') { 
-        message.channel.send('**ايدي روم الذي يعمل عليه الاسبام  : __' + AbdoSPAM.join(' ') + '__**');
-        message.channel.send('```في حال لم تجد الايدي هذا يدل علي ان السبام متوقف```');
-    }
-
-    
+      }
 });
 
+client2.on('message', message => {
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
+client3.on('message', message => {
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
+client4.on('message', message => {
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
+client5.on('message', message => {
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
+
+client6.on('message', message => {
+if (message.content === prefix+'fast') {
+      let count = 0;
+      let ecount = 0;
+      for(let x = 0; x < 30000; x++) {
+        message.channel.send(`**??? ???? ??? ?? ??? **[ " ${x} " ]`)
+          .then(m => {
+            count++;
+          })
+          
+        }
+      }
+});
